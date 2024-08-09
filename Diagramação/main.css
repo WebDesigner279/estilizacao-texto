@@ -1,0 +1,47 @@
+.ponto::before {
+  content: '•'; /* Adiciona um ponto antes do texto */
+  color: #000; /* Define a cor do ponto */
+
+  margin-right: 10px; /* Define o espaço entre o ponto e o texto */
+  font-size: 24px; /* Ajusta o tamanho do ponto */
+  vertical-align: middle; /* Alinha verticalmente o ponto com o texto */
+}
+
+/* Estilizando a lista numerada */
+.lista-numerada {
+  list-style-type: decimal; /* Tipo de numeração */
+  padding-left: 20px; /* Espaço à esquerda dos itens */
+  margin: 20px; /* Margem ao redor da lista */
+  font-family: Arial, sans-serif; /* Fonte dos itens */
+  color: #333; /* Cor do texto dos itens */
+}
+
+.lista-numerada li {
+  margin-bottom: 10px; /* Espaço entre os itens */
+}
+
+/* Adicionando estilo ao número da lista */
+.lista-numerada li::marker {
+  color: #007BFF; /* Cor do número */
+  font-weight: bold; /* Negrito no número */
+}
+
+ul.dashed-list {
+  list-style-type: none; /* Remove o marcador padrão */
+  padding: 0;            /* Remove o padding padrão */
+}
+
+ul.dashed-list li {
+  position: relative;    /* Necessário para posicionar o traço */
+  padding-left: 10px;   /* Espaço para o traço */
+  margin-bottom: 5px;   /* Espaço entre os itens da lista */
+}
+
+ul.dashed-list li::before {
+  content: '-';          /* O traço que aparecerá antes de cada item */
+  position: absolute;    /* Posiciona o traço */
+  left: 0;               /* Alinha o traço à esquerda do item */
+  top: 50%;              /* Centraliza verticalmente o traço */
+  transform: translateY(-50%); /* Ajusta a posição vertical */
+}
+
